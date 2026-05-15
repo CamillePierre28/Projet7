@@ -1,0 +1,17 @@
+env/
+.env
+__pycache__/
+*.pyc
+
+data/raw/*
+data/processed/*
+vectorstore/*
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+.DS_Store
+.ipynb_checkpoints/
+
+Etapes.txt
