@@ -24,7 +24,7 @@ def main():
     if mistral_key:
         print("MISTRAL_API_KEY: OK")
     else:
-        print("MISTRAL_API_KEY: absente, normal si tu n'as pas encore configuré la clé")
+        print("MISTRAL_API_KEY: absente")
 
     print("Imports LangChain / Faiss / Mistral: OK")
 
