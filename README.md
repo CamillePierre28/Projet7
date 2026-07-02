@@ -1,4 +1,3 @@
-```markdown
 # Puls-Events RAG Chatbot
 
 Chatbot RAG développé en Python pour répondre à des questions sur des événements culturels à partir de données OpenAgenda / OpenDataSoft.
@@ -734,4 +733,3 @@ collecte de données
 ```
 
 Le point central du projet est que le modèle ne répond pas seul : il s'appuie sur des événements retrouvés dans une base locale, ce qui rend les réponses plus fiables, plus vérifiables et plus adaptées au domaine métier.
-```

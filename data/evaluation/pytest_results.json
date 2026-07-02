@@ -1,0 +1,248 @@
+{
+  "generated_at": "2026-07-02T22:56:08",
+  "pytest_returncode": 1,
+  "test_files": [
+    "tests/test_api.py",
+    "tests/test_chunking.py",
+    "tests/test_embeddings.py",
+    "tests/test_evaluation.py",
+    "tests/test_fetch_openagenda.py",
+    "tests/test_preprocessing.py",
+    "tests/test_vectorstore.py"
+  ],
+  "summary": {
+    "tests": 28,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "time": 10.81
+  },
+  "tests": [
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_health_endpoint",
+      "status": "passed",
+      "duration_seconds": 0.006,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_ask_valid_question",
+      "status": "passed",
+      "duration_seconds": 0.004,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_ask_empty_question",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_ask_spaces_only_question",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_ask_missing_question",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_ask_empty_payload",
+      "status": "passed",
+      "duration_seconds": 0.003,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_api",
+      "name": "test_rebuild_without_key_is_unauthorized",
+      "status": "passed",
+      "duration_seconds": 0.004,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_chunking",
+      "name": "test_dataframe_to_documents_creates_documents",
+      "status": "passed",
+      "duration_seconds": 0.002,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_chunking",
+      "name": "test_split_documents_creates_chunks",
+      "status": "passed",
+      "duration_seconds": 0.001,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_embeddings",
+      "name": "test_embeddings_file_exists",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_embeddings",
+      "name": "test_embeddings_have_expected_structure",
+      "status": "passed",
+      "duration_seconds": 2.176,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_exact_match_positive",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_exact_match_negative",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_classify_similarity_correct",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_classify_similarity_partial",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_classify_similarity_incorrect",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_business_classification_correct",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_is_future_date",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_evaluation",
+      "name": "test_is_past_date",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_fetch_openagenda",
+      "name": "test_fetch_events_returns_results",
+      "status": "passed",
+      "duration_seconds": 0.711,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_fetch_openagenda",
+      "name": "test_fetched_events_have_expected_fields",
+      "status": "passed",
+      "duration_seconds": 0.542,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_fetch_openagenda",
+      "name": "test_fetched_events_are_filtered_on_occitanie_and_2025",
+      "status": "failed",
+      "duration_seconds": 0.533,
+      "problem_type": "failure",
+      "message": "AssertionError: assert False\n +  where False = <built-in method startswith of str object at 0x0000029951F10080>('2025')\n +    where <built-in method startswith of str object at 0x0000029951F10080> = '2032-01-01T01:00:00+00:00'.startswith\n +      where '2032-01-01T01:00:00+00:00' = str('2032-01-01T01:00:00+00:00')"
+    },
+    {
+      "file_or_class": "tests.test_preprocessing",
+      "name": "test_clean_html_removes_tags",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_preprocessing",
+      "name": "test_normalize_event_returns_expected_fields",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_preprocessing",
+      "name": "test_preprocess_events_drops_invalid_events",
+      "status": "passed",
+      "duration_seconds": 0.009,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_preprocessing",
+      "name": "test_preprocess_events_converts_dates",
+      "status": "passed",
+      "duration_seconds": 0.005,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_vectorstore",
+      "name": "test_faiss_index_creation_and_search",
+      "status": "passed",
+      "duration_seconds": 0.023,
+      "problem_type": "",
+      "message": ""
+    },
+    {
+      "file_or_class": "tests.test_vectorstore",
+      "name": "test_faiss_save_and_load",
+      "status": "passed",
+      "duration_seconds": 0.039,
+      "problem_type": "",
+      "message": ""
+    }
+  ],
+  "pytest_output_path": "data\\evaluation\\pytest_output.txt",
+  "junit_xml_path": "data\\evaluation\\pytest_results.xml"
+}

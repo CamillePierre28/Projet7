@@ -1,0 +1,89 @@
+Commande lancee : C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot\env\Scripts\python.exe -m pytest tests -vv --tb=short --junitxml=data\evaluation\pytest_results.xml --color=no
+
+===== STDOUT =====
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot\env\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot
+plugins: anyio-4.13.0, deepeval-4.0.6, langsmith-0.8.4, asyncio-1.4.0, cov-7.1.0, repeat-0.9.4, rerunfailures-16.3, xdist-3.8.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 28 items
+
+tests/test_api.py::test_health_endpoint PASSED                           [  3%]
+tests/test_api.py::test_ask_valid_question PASSED                        [  7%]
+tests/test_api.py::test_ask_empty_question PASSED                        [ 10%]
+tests/test_api.py::test_ask_spaces_only_question PASSED                  [ 14%]
+tests/test_api.py::test_ask_missing_question PASSED                      [ 17%]
+tests/test_api.py::test_ask_empty_payload PASSED                         [ 21%]
+tests/test_api.py::test_rebuild_without_key_is_unauthorized PASSED       [ 25%]
+tests/test_chunking.py::test_dataframe_to_documents_creates_documents PASSED [ 28%]
+tests/test_chunking.py::test_split_documents_creates_chunks PASSED       [ 32%]
+tests/test_embeddings.py::test_embeddings_file_exists PASSED             [ 35%]
+tests/test_embeddings.py::test_embeddings_have_expected_structure PASSED [ 39%]
+tests/test_evaluation.py::test_exact_match_positive PASSED               [ 42%]
+tests/test_evaluation.py::test_exact_match_negative PASSED               [ 46%]
+tests/test_evaluation.py::test_classify_similarity_correct PASSED        [ 50%]
+tests/test_evaluation.py::test_classify_similarity_partial PASSED        [ 53%]
+tests/test_evaluation.py::test_classify_similarity_incorrect PASSED      [ 57%]
+tests/test_evaluation.py::test_business_classification_correct PASSED    [ 60%]
+tests/test_evaluation.py::test_is_future_date PASSED                     [ 64%]
+tests/test_evaluation.py::test_is_past_date PASSED                       [ 67%]
+tests/test_fetch_openagenda.py::test_fetch_events_returns_results PASSED [ 71%]
+tests/test_fetch_openagenda.py::test_fetched_events_have_expected_fields PASSED [ 75%]
+tests/test_fetch_openagenda.py::test_fetched_events_are_filtered_on_occitanie_and_2025 FAILED [ 78%]
+tests/test_preprocessing.py::test_clean_html_removes_tags PASSED         [ 82%]
+tests/test_preprocessing.py::test_normalize_event_returns_expected_fields PASSED [ 85%]
+tests/test_preprocessing.py::test_preprocess_events_drops_invalid_events PASSED [ 89%]
+tests/test_preprocessing.py::test_preprocess_events_converts_dates PASSED [ 92%]
+tests/test_vectorstore.py::test_faiss_index_creation_and_search PASSED   [ 96%]
+tests/test_vectorstore.py::test_faiss_save_and_load PASSED               [100%]Running teardown with pytest sessionfinish...
+
+
+================================== FAILURES ===================================
+___________ test_fetched_events_are_filtered_on_occitanie_and_2025 ____________
+tests\test_fetch_openagenda.py:56: in test_fetched_events_are_filtered_on_occitanie_and_2025
+    assert str(event["firstdate_begin"]).startswith("2025")
+E   AssertionError: assert False
+E    +  where False = <built-in method startswith of str object at 0x0000029951F10080>('2025')
+E    +    where <built-in method startswith of str object at 0x0000029951F10080> = '2032-01-01T01:00:00+00:00'.startswith
+E    +      where '2032-01-01T01:00:00+00:00' = str('2032-01-01T01:00:00+00:00')
+---------------------------- Captured stdout call -----------------------------
+100 �v�nements bruts r�cup�r�s...
+============================== warnings summary ===============================
+api\main.py:126
+  C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot\api\main.py:126: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("startup")
+
+env\Lib\site-packages\fastapi\applications.py:4598
+  C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot\env\Lib\site-packages\fastapi\applications.py:4598: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)  # ty: ignore[deprecated]
+
+tests/test_vectorstore.py::test_faiss_index_creation_and_search
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+tests/test_vectorstore.py::test_faiss_index_creation_and_search
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+tests/test_vectorstore.py::test_faiss_index_creation_and_search
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: C:\Users\cpier\Desktop\PROJET\puls-events-rag-chatbot\data\evaluation\pytest_results.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_fetch_openagenda.py::test_fetched_events_are_filtered_on_occitanie_and_2025 - AssertionError: assert False
+ +  where False = <built-in method startswith of str object at 0x0000029951F10080>('2025')
+ +    where <built-in method startswith of str object at 0x0000029951F10080> = '2032-01-01T01:00:00+00:00'.startswith
+ +      where '2032-01-01T01:00:00+00:00' = str('2032-01-01T01:00:00+00:00')
+================== 1 failed, 27 passed, 5 warnings in 10.81s ==================
+
+===== STDERR =====
