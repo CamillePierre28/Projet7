@@ -1,0 +1,6 @@
+question,reference_answer,expected_city,expected_keyword,requires_future
+Quels événements culturels sont prévus à Toulouse ?,La réponse doit proposer des événements à venir situés à Toulouse ou autour de Toulouse.,Toulouse,,true
+Quels événements récents ont eu lieu en Occitanie ?,La réponse doit mentionner des événements récents localisés en Occitanie.,Occitanie,,false
+Y a-t-il des événements liés à la danse ?,La réponse doit identifier des événements dont la description ou les mots-clés évoquent la danse.,,danse,false
+Quels événements sont organisés à Montpellier ?,La réponse doit proposer des événements localisés à Montpellier.,Montpellier,,false
+Peux-tu me proposer une sortie culturelle ?,La réponse doit recommander un ou plusieurs événements présents dans la base.,,,false

@@ -1,18 +1,53 @@
+# Environnements virtuels Python
 env/
+.venv/
+venv/
+
+# Variables d'environnement et secrets
 .env
+.env.*
+!.env.example
 
+# Cache Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 
-data/raw/*
-data/processed/*
-vectorstore/*
-
+# Tests et couverture
 .pytest_cache/
 .coverage
 htmlcov/
+.coverage.*
 
+# Données générées ou volumineuses
+data/raw/*
+data/processed/*
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Résultats d'évaluation générés
+data/evaluation/evaluation_results.csv
+
+# Index vectoriel FAISS
+vectorstore/*
+
+!vectorstore/.gitkeep
+
+# DeepEval local
+.deepeval/
+
+# Logs
+*.log
+
+# Fichiers système
 .DS_Store
+Thumbs.db
+
+# Notebooks
 .ipynb_checkpoints/
 
-Etapes.txt
+# Caches d'outils Python
+.mypy_cache/
+.ruff_cache/
+.cache/

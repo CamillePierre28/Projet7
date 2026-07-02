@@ -1,0 +1,34 @@
+services:
+  vectorstore-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: puls_events_vectorstore_builder
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+    command: >
+      sh -c "python -m scripts.fetch_openagenda &&
+             python -m scripts.build_vectorstore"
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: puls_events_api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+    depends_on:
+      vectorstore-builder:
+        condition: service_completed_successfully
+    command: >
+      uvicorn api.main:app --host 0.0.0.0 --port 8000
+    restart: unless-stopped

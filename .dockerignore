@@ -1,0 +1,46 @@
+# Git
+.git/
+.gitignore
+
+# Environnements virtuels
+env/
+venv/
+.venv/
+
+# Variables d'environnement et secrets
+.env
+.env.*
+
+# Cache Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Tests et couverture
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Caches d'outils
+.mypy_cache/
+.ruff_cache/
+.cache/
+.deepeval/
+
+# Données générées ou volumineuses
+data/raw/*
+data/processed/*
+
+# Index vectoriel local
+vectorstore/*
+
+# Logs
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints/
