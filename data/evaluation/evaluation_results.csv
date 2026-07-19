@@ -1,0 +1,79 @@
+question,reference_answer,generated_answer,similarity_score,exact_match,similarity_classification,sources_count,expected_city,city_ok,expected_keyword,keyword_ok,requires_future,future_ok,business_classification,deepeval_available,answer_relevancy_score,faithfulness_score,contextual_relevancy_score,deepeval_error
+Quels événements culturels sont prévus à Toulouse ?,La réponse doit proposer des événements à venir situés à Toulouse ou autour de Toulouse.,"Voici les événements culturels prévus à Toulouse selon le contexte fourni :
+
+- **Venez jouer !**
+  **Date** : 26 juin 2026 à 15h
+  **Lieu** : Parvis de la bibliothèque d'étude et du patrimoine
+
+- **Concert**
+  **Date** : 23 juin 2026 à 17h
+  **Lieu** : Auditorium Saint-Pierre des Cuisines
+
+- **Concert**
+  **Date** : 24 juin 2026 à 17h
+  **Lieu** : Auditorium Saint-Pierre des Cuisines
+
+- **Concert**
+  **Date** : 25 juin 2026 à 18h
+  **Lieu** : Chapelle des Carmélites
+
+- **Concert**
+  **Date** : 26 juin 2026 à 18h
+  **Lieu** : Temple du Salin",0.09142631188547326,0,incorrecte,5,Toulouse,True,,True,True,True,correcte,True,1.0,1.0,1.0,
+Quels événements récents ont eu lieu en Occitanie ?,La réponse doit mentionner des événements récents localisés en Occitanie.,"Voici les événements récents en Occitanie mentionnés dans le contexte :
+
+- **Fermes en Fête - Bio** à **Milhavet** le **6 juin 2026** au *Pierre FABRE Capendut - 81130 Milhavet*
+- **Fermes en Fête - Bio** à **Montredon-Labessonnié** le **6 juin 2026** au *Aline COUTAREL et Benoît LOLLIVIER, 266 chemin de la Borie Maigre - 81360 Montredon-Labessonnié*
+- **Fermes en Fête - Bio** à **Cestayrols** le **6 juin 2026** au *Patrick NOUVEL Domaine de Larroque - 81150 Cestayrols*
+- **Fermes en Fête - Bio** à **Rabastens** le **6 juin 2026** au *Bart et Tom VERHOEF, 857 route de Foncoussières - 81800 Rabastens*
+- **Fermes en Fête - Bio** à **Saint-Jean-de-Vals** le **6 juin 2026** au *Crystèle GOURJADE, 197 chemin de la Roussarié - 81210 Saint-Jean-de-Vals*",0.11383202717325286,0,incorrecte,5,Occitanie,True,,True,False,True,correcte,True,1.0,0.8,1.0,
+Y a-t-il des événements liés à la danse ?,La réponse doit identifier des événements dont la description ou les mots-clés évoquent la danse.,"Voici les événements liés à la danse en Occitanie :
+
+1. **DES DANSES & DES LUTTES · Cie DANS6T**
+   - Ville : Ramonville-Saint-Agne
+   - Date : 27 mai 2026 à 17h
+   - Lieu : Le Kiwi (Place Jean Jaurès)
+
+2. **Demain se danse**
+   - Ville : Alès
+   - Date : 25 avril 2026 de 11h30 à 15h
+   - Lieu : Place des Martyrs de la Résistance
+
+3. **Mini Bal Danses traditionnelles et occitanes**
+   - Ville : Saint-Gaudens
+   - Date : 23 avril 2026 à 18h
+   - Lieu : Place Sainte-Anne
+
+4. **Fête de la musique (avec spectacles de danse)**
+   - Ville : Alès
+   - Date : 21 juin 2026 (plusieurs horaires)
+   - Lieu : Plusieurs places (Abbaye, Mairie, etc.)
+
+5. **Spectacle de danse**
+   - Ville : Toulouse
+   - Date : 23 mai 2026 à 11h
+   - Lieu : Auditorium Saint-Pierre des Cuisines",0.15836217430000624,0,incorrecte,5,,True,danse,True,False,True,correcte,True,1.0,0.8,0.6666666666666666,
+Quels événements sont organisés à Montpellier ?,La réponse doit proposer des événements localisés à Montpellier.,"Voici les événements organisés à Montpellier selon le contexte fourni :
+
+- **La Fête du Vin Bio - Métropole de Montpellier**
+  **Date** : 23 mai 2026
+  **Lieu** : Métropole de Montpellier (établissements et domaines partenaires)
+
+- **Visite commentée : Le Carrousel - La Maison Par Tous**
+  **Date** : 19 septembre 2026 (de 7h30 à 10h)
+  **Lieu** : Le Carrousel - La Maison Par Tous, 9 Cours Gambetta, 34000 Montpellier
+
+- **Journée de la francophonie à Montpellier**
+  **Date** : 28 mars 2026 (de 13h à 18h)
+  **Lieu** : Faculté de médecine, Salle des Actes et Theatrum anatomicum
+
+- **Le Forum des 500**
+  **Date** : 7 mai 2026 (de 9h30 à 13h)
+  **Lieu** : Esplanade de l'Europe, Montpellier",0.177621451222581,0,incorrecte,5,Montpellier,True,,True,False,True,correcte,True,1.0,1.0,1.0,
+Peux-tu me proposer une sortie culturelle ?,La réponse doit recommander un ou plusieurs événements présents dans la base.,"Voici une proposition de sortie culturelle en Occitanie :
+
+**Semaine des Cultures Urbaines**
+- **Ville** : Roques
+- **Date** : Du 23 mai au 30 mai 2026
+- **Lieu** : Tiers-lieu Culturel, Le Moulin
+- **Activités** : Exposition, ateliers (scratching, beat box), spectacle de danse hip-hop, conférence et démonstrations.",0.0,0,incorrecte,5,,True,,True,False,True,correcte,True,1.0,0.9,0.75,

@@ -26,9 +26,6 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Résultats d'évaluation générés
-data/evaluation/evaluation_results.csv
-
 # Index vectoriel FAISS
 vectorstore/*
 
